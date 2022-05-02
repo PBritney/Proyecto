@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/styles.css">
+        <script type="text/javascript" src="js/mm.js"></script>
+
+        <style>
+            body{
+                background: #ADA996;  /* fallback for old browsers */
+                background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" >
+            <h1 align="center">LISTA DE PRODUCTOS DEL ALMACÉN</h1>
+            <hr>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalGuardar" data-whatever="@mdo">NUEVO</button>
+            <br><br>
+            <table class="table" id="tablita">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">CODIGO</th>
+                        <th scope="col">NOMBRE</th>
+                        <th scope="col">PRECIO</th>
+
+                        <th scope="col" colspan="2">ACCION</th>
+                    </tr>
+                </thead>
+                <tbody>   
+                <tbody>
+                    <tr>
+
+                <th scope="row">1</th>
+                <td>C01</td>
+                <td>CAFE NEGRO</td>
+                <td>S/.4</td>
+                <td>....</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>C02</td>
+                    <td>FRAPPE DE FRESA</td>
+                    <td>S/.10</td>
+                    <td>....</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>C03</td>
+                    <td>JUGO DE PAPAYA</td>
+                    <td>S/.8</td>
+                    <td>....</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>C04</td>
+                    <td>ICED COFFE</td>
+                    <td>S/.9</td>
+                    <td>....</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>C05</td>
+                    <td>CAFE CON LECHE</td>
+                    <td>S/.6</td>
+                    <td>....</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>C02</td>
+                    <td>FRAPPE DE FRESA</td>
+                    <td>S/.10</td>
+                    <td>....</td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td>C03</td>
+                    <td>JUGO DE PAPAYA</td>
+                    <td>S/.8</td>
+                    <td>....</td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td>C04</td>
+                    <td>ICED COFFE</td>
+                    <td>S/.9</td>
+                    <td>....</td>
+                </tr>
+                <tr>
+                    <th scope="row">9</th>
+                    <td>C05</td>
+                    <td>CAFE CON LECHE</td>
+                    <td>S/.6</td>
+                    <td>....</td>
+                </tr>
+                
+
+
+                </tbody>
+            </table>  
+            <button type="button" class="btn btn-danger" onclick="reti()" >SALIR</button>
+            <!-- Modal Guardar alumno-->
+            <div class="modal fade" id="modalGuardar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Nuevo Alumno</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">NOMBRE:</label>
+                                    <input type="text" class="form-control" id="nombres" placeholder="Nombres">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">PRECIO EN SOLES: </label>
+                                    <input type="text" class="form-control" id="dni" placeholder="Dni">
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="guardar">REGISTRAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Modal Modificar Post -->
+            <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">REGISTRAR</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="recipient-name" class="col-form-label">NOMBRE:</label>
+                                    <input type="text" class="form-control" id="editar_nombres" placeholder="Nombres">
+                                    <input type="hidden" class="form-control" id="idalumno" value="0">
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">PRECIO EN SOLES:</label>
+                                    <input type="text" class="form-control" id="editar_dni" placeholder="Dni">
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="modificar">REGISTRAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+            <footer>
+                <p> &copy Derechos Reservados lima-Perú-2022</p>
+                <img src="img/twitter.png" alt="">
+                <img src="img/youtube.png" alt="">
+            </footer>
+
+
+            <script src="js/jquery.js"></script> 
+            <script src="js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.5.2/bootbox.min.js"></script> 
+            <script src="js/alumno.js"></script>
+    </body>
+</html>
